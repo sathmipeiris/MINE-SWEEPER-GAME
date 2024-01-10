@@ -119,7 +119,112 @@ public:
     }
 };
 
-int main(){
+
+
+int convertLetterToIndex(char letter, int max) {
+    switch (letter) {
+    case 'A':
+        return 0;
+    case 'B':
+        return 1;
+    case 'C':
+        return 2;
+    case 'D':
+        return 3;
+    case 'E':
+        return 4;
+    case 'F':
+        return 5;
+    case 'G':
+        return 6;
+    case 'H':
+        return 7;
+    case 'I':
+        return 8;
+    case 'J':
+        return 9;
+    case 'K':
+        return 10;
+    case 'L':
+        return 11;
+    case 'M':
+        return 12;
+    case 'N':
+        return 13;
+    case 'O':
+        return 14;
+    case 'P':
+        return 15;
+    case 'Q':
+        return 16;
+    case 'R':
+        return 17;
+    case 'S':
+        return 18;
+    case 'T':
+        return 19;
+    default:
+        return -1;  // Invalid input
+    }
+}
+
+int main() {
+    srand(static_cast<unsigned>(time(nullptr)));
+
+    int rows, cols, numMines;
+    int fieldOption;
+    cout << "----------------MINE SWEEPER GAME-----------" << endl;
+    cout << "Levels: " << endl;
+    cout << "\t1. Easy " << endl;   // 10*10 grid and 12 mines
+    cout << "\t2. Medium" << endl;  // 15*15 grid and 18 mines
+    cout << "\t3. Hard" << endl;    // 20*20 grid and 24 mines
+    cout << "Enter Level Option: ";
+    cin >> fieldOption;
+
+    if (fieldOption == 1) {
+        rows = 10;
+        cols = 10;
+        numMines = 12;
+    } else if (fieldOption == 2) {
+        rows = 15;
+        cols = 15;
+        numMines = 18;
+    } else if (fieldOption == 3) {
+        rows = 20;
+        cols = 20;
+        numMines = 24;
+    } else {
+        cout << "Error: Invalid Level Option." << endl;
+        return 1;
+    }
+
+    MinesweeperBoard gameBoard(rows, cols, numMines);
+
+    while (true) {
+        gameBoard.displayBoard();
+
+        string command;
+        cout << "Enter command (e.g., {A B R} to reveal, {A B F} to flag:): ";
+        char row, col;
+        cin >> row >> col;
+        int iRow = convertLetterToIndex(row, rows);
+        int iCol = convertLetterToIndex(col, cols);
+        cin >> command;
+
+        if (command == "F") {
+            gameBoard.toggleFlag(iRow, iCol);
+        } else if (command == "R") {
+            if (gameBoard.isGameLost()) {
+                cout << "Game Over! You hit a mine." << endl;
+                break;
+            }
+            gameBoard.revealCell(iRow, iCol);
+            if (gameBoard.isGameWon()) {
+                cout << "Congratulations! You cleared the board without hitting any mines." << endl;
+                break;
+            }
+        }
+    }
 
     return 0;
 }
