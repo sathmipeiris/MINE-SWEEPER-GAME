@@ -91,10 +91,20 @@ public:
         }
     }
 
-        void toggleFlag(int row, int col) {
+    void toggleFlag(int row, int col) {
         if (row >= 0 && row < rows && col >= 0 && col < cols) {
             board[row][col].isFlagged = !board[row][col].isFlagged;
         }
+    }
+    bool isGameWon() {
+        for (int i = 0; i < rows; ++i) {
+            for (int j = 0; j < cols; ++j) {
+                if (!board[i][j].isRevealed && !board[i][j].isMine) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 };
 
