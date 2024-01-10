@@ -76,6 +76,20 @@ public:
             cout << endl;
         }
     }
+
+    void revealCell(int row, int col) {
+        if (row >= 0 && row < rows && col >= 0 && col < cols && !board[row][col].isRevealed &&
+            !board[row][col].isFlagged) {
+            board[row][col].isRevealed = true;
+            if (board[row][col].adjacentMines == 0) {
+                for (int ni = -1; ni <= 1; ++ni) {
+                    for (int nj = -1; nj <= 1; ++nj) {
+                        revealCell(row + ni, col + nj);
+                    }
+                }
+            }
+        }
+    }
 };
 
 int main(){
