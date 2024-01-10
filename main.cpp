@@ -52,6 +52,30 @@ private:
         }
     }
 public:
+    MinesweeperBoard(int numRows, int numCols, int numMines) : rows(numRows), cols(numCols) {
+        board.resize(rows, vector<Cell>(cols, Cell()));
+        placeMines(numMines);
+        calculateAdjacentMines();
+    }
+
+    void displayBoard() {
+        for (int i = 0; i < rows; ++i) {
+            for (int j = 0; j < cols; ++j) {
+                if (board[i][j].isRevealed) {
+                    if (board[i][j].isMine) {
+                        cout << ".";
+                    } else {
+                        cout << board[i][j].adjacentMines << " ";
+                    }
+                } else if (board[i][j].isFlagged) {
+                    cout << "F ";
+                } else {
+                    cout << "C ";
+                }
+            }
+            cout << endl;
+        }
+    }
 };
 
 int main(){
