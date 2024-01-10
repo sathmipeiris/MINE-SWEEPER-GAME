@@ -90,6 +90,12 @@ public:
             }
         }
     }
+
+        void toggleFlag(int row, int col) {
+        if (row >= 0 && row < rows && col >= 0 && col < cols) {
+            board[row][col].isFlagged = !board[row][col].isFlagged;
+        }
+    }
 };
 
 int main(){
