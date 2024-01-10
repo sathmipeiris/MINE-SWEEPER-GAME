@@ -106,6 +106,17 @@ public:
         }
         return true;
     }
+
+     bool isGameLost() {
+        for (int i = 0; i < rows; ++i) {
+            for (int j = 0; j < cols; ++j) {
+                if (board[i][j].isRevealed && board[i][j].isMine) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 };
 
 int main(){
