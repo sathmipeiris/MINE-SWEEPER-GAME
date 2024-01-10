@@ -1,6 +1,6 @@
 
 # Repository  Deatails                             
-- Repository                                   : https://github.com/sathmipeiris/MINE-SWEEPER-GAME
+Repository                                   : https://github.com/sathmipeiris/MINE-SWEEPER-GAME
 - [G.N.K LAKSHAN  21/ENG/031]                  : https://github.com/gnklakshan
 - [Manavi Amanda Hettiarachchi  21/ENG/077 ]   : https://github.com/Mani-Amanda
 - [Sathmi Vihansa Peiris    21/ENG/035  ]      : https://github.com/sathmipeiris
