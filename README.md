@@ -17,3 +17,4 @@ Mine Sweeper is a console-based game where players identify and flag mine locati
 - [G.N.K LAKSHAN](https://github.com/gnklakshan)
 - [Manavi Amanda Hettiarachchi](https://github.com/Mani-Amanda)
 - [Sathmi Vihansa Peiris](https://github.com/sathmipeiris)
+Repository  Deatails                                   : https://github.com/sathmipeiris/MINE-SWEEPER-GAME
