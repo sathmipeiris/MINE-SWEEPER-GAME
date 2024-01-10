@@ -32,6 +32,26 @@ private:
             }
         }
     }
+
+    void calculateAdjacentMines() {
+        for (int i = 0; i < rows; ++i) {
+            for (int j = 0; j < cols; ++j) {
+                if (!board[i][j].isMine) {
+                    for (int ni = -1; ni <= 1; ++ni) {
+                        for (int nj = -1; nj <= 1; ++nj) {
+                            int niCoord = i + ni;
+                            int njCoord = j + nj;
+                            if (niCoord >= 0 && niCoord < rows && njCoord >= 0 && njCoord < cols &&
+                                board[niCoord][njCoord].isMine) {
+                                board[i][j].adjacentMines++;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+public:
 };
 
 int main(){
