@@ -41,18 +41,18 @@ Mine Sweeper is a console-based game where players identify and flag mine locati
 
 After a few iterations, a 10-by-10 field might look like this:
 
-|   | A | B | C | D | E | F | G | H | I | J |
+|   | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` | `I` | `J` |
 |---|---|---|---|---|---|---|---|---|---|---|
-| A | c | c | c | c | c | c | c | c | c | c |
-| B | c | c | c | c | c | c | c | c | c | c |
-| C | c | c | c | c | c | c | c | c | c | c |
-| D | c | c | . | . | . | c | c | c | c | c |
-| E | c | c | . | 1 | F | c | c | c | c | c |
-| F | c | c | . | 2 | . | 2 | c | c | c | c |
-| G | c | c | F | 1 | . | c | c | c | c | c |
-| H | c | c | . | . | . | c | c | c | c | c |
-| I | c | c | c | c | c | c | c | c | c | c |
-| J | c | c | c | c | c | c | c | c | c | c |
+| `A' | c | c | c | c | c | c | c | c | c | c |
+| `B` | c | c | c | c | c | c | c | c | c | c |
+| `C` | c | c | c | c | c | c | c | c | c | c |
+| `D` | c | c | . | . | . | c | c | c | c | c |
+| `E` | c | c | . | 1 | F | c | c | c | c | c |
+| `F` | c | c | . | 2 | . | 2 | c | c | c | c |
+| `G` | c | c | F | 1 | . | c | c | c | c | c |
+| `H` | c | c | . | . | . | c | c | c | c | c |
+| `I` | c | c | c | c | c | c | c | c | c | c |
+| `J` | c | c | c | c | c | c | c | c | c | c |
 
 
 In this example, the player strategically places flags and reveals locations based on the number of mines in neighboring cells.
