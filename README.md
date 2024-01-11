@@ -43,7 +43,7 @@ After a few iterations, a 10-by-10 field might look like this:
 
 |   | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` | `I` | `J` |
 |---|---|---|---|---|---|---|---|---|---|---|
-| `A' | c | c | c | c | c | c | c | c | c | c |
+| `A` | c | c | c | c | c | c | c | c | c | c |
 | `B` | c | c | c | c | c | c | c | c | c | c |
 | `C` | c | c | c | c | c | c | c | c | c | c |
 | `D` | c | c | . | . | . | c | c | c | c | c |
